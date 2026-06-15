@@ -97,7 +97,7 @@ export default function Dashboard() {
     const token = localStorage.getItem("token");
 
     await axios.delete(
-      "http://localhost:5000/api/guest/clear-event",
+      `${process.env.NEXT_PUBLIC_API_URL}/api/guest/clear-event`,
 
       {
         headers: {
@@ -127,7 +127,7 @@ export default function Dashboard() {
     const token = localStorage.getItem("token");
 
     const res = await axios.post(
-      "http://localhost:5000/api/guest/bulk-upload",
+      `${process.env.NEXT_PUBLIC_API_URL}/api/guest/bulk-upload`,
 
       formData,
 
