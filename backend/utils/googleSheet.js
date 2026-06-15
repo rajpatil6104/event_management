@@ -1,7 +1,10 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 const { JWT } = require("google-auth-library"); // Required for v4 authentication
 
-const creds = require("../config/service-account.json");
+const creds =
+JSON.parse(
+ process.env.GOOGLE_SERVICE_ACCOUNT
+);
 const SHEET_ID = "1hVqHfAQDPTX9-MPgr5gN0A53L98JCV-7AQu6DlNtAxI";
 
 // 1. Initialize the JWT authentication object first
