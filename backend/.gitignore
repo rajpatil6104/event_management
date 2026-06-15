@@ -3,4 +3,4 @@ node_modules
 uploads
 QR_images
 config/service-account.json
-*.log
+.log
