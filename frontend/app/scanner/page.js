@@ -40,7 +40,7 @@ export default function ScannerPage() {
 
         try {
           const response = await axios.post(
-            "http://localhost:5000/api/guest/verify",
+            `${process.env.NEXT_PUBLIC_API_URL}api/guest/verify`,
             {
               guestId: decodedText,
             },
