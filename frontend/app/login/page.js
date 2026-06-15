@@ -12,7 +12,7 @@ export default function Login() {
   const [showVerify, setShowVerify] = useState(false);
 
   const login = async () => {
-    const res = await axios.post("http://localhost:5000/api/guest/login", {
+    const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/guest/login`, {
       email,
       password,
     });
@@ -24,7 +24,7 @@ export default function Login() {
   const register = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/guest/register-admin",
+        `${process.env.NEXT_PUBLIC_API_URL}api/guest/register-admin`,
 
         {
           email,
@@ -42,7 +42,7 @@ export default function Login() {
   const verify = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/guest/verify-admin",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/guest/verify-admin`,
 
         {
           email,
